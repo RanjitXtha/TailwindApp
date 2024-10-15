@@ -4,7 +4,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}", // Add this line to specify where Tailwind should look for class names
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        customRed:'#F54748',
+        textColor: '#2E2E2E',
+        lightColor: '#616161',
+      },
+    },
   },
   plugins: [],
 }

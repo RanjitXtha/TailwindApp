@@ -1,60 +1,67 @@
 import React from 'react'
 import { MdArrowOutward } from "react-icons/md";
 
+import dessert from '../assets/dessert.png';
+import drink from '../assets/drink.png';
+import local from '../assets/local.png';
+import popular from '../assets/popularr.png'
+import vergeterian from '../assets/vegeterian.avif'
+import western from '../assets/western.png'
+
 const Category = () => {
     const categories = [
         {
           id: 1,
           title: "Popular Recipes",
-          img: "https://via.placeholder.com/150?text=Popular+Recipes",
+          img: popular,
           info: "Tried and loved by many."
         },
         {
           id: 2,
           title: "Desserts",
-          img: "https://via.placeholder.com/150?text=Desserts",
+          img: dessert,
           info: "Sweet treats for any occasion."
         },
         {
           id: 3,
           title: "Drinks",
-          img: "https://via.placeholder.com/150?text=Drinks",
+          img: drink,
           info: "Refreshing beverages to enjoy."
         },
         {
           id: 4,
           title: "Western Dishes",
-          img: "https://via.placeholder.com/150?text=Western+Dishes",
+          img: western,
           info: "Famous dishes from the West."
         },
         {
           id: 5,
           title: "Local Favorites",
-          img: "https://via.placeholder.com/150?text=Local+Favorites",
+          img: local,
           info: "Traditional and regional delights."
         },
         {
           id: 6,
           title: "Vegetarian",
-          img: "https://via.placeholder.com/150?text=Vegetarian",
+          img: vergeterian,
           info: "Wholesome plant-based meals."
         }
       ];
       
 
   return (
-    <div className='padding my-6 w-full'>
+    <div className='padding my-6 w-full '>
         <h1 className='titles'>Categories</h1>
-        <section className='flex overflow-x-scroll gap-5'>
+        <section className='flex overflow-x-scroll gap-5 px-3 pb-3 hide-scrollbar'>
             {
                 categories.map((category)=>(
-                    <div className='w-[calc((100vw-10rem-5rem)/4)] h-[19rem] bg-cyan-400 rounded-3xl flex flex-col items-center justify-evenly flex-shrink-0'>
-                        <div className='w-[6rem] h-[6rem] bg-gray-600 rounded-full'></div>
+                    <div className='category-cards'>
+                        <div className='w-[6rem] h-[6rem] bg-customRed rounded-full p-3'><img src={category.img} alt="category"/></div>
                         <p className='font-bold text-xl'>{category.title}</p>
                         <p>{category.info}</p>
                         <div>
-                            <button className='round-buttons px-4 py-3 mr-3'>See more</button>
-                            <button className='bg-red-600 rounded-full p-4'><MdArrowOutward /></button>
+                            <button className='round-buttons px-4 py-3 mr-1'>See more</button>
+                            <button className='bg-customRed rounded-full p-4 text-white'><MdArrowOutward /></button>
                         </div>
                     </div>
                 ))
