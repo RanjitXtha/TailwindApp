@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .padding{
+    @apply px-[5rem] py-4
+  }
+
+  .round-buttons{
+    @apply bg-red-600 py-4 px-7 rounded-3xl text-white
+  }
+
+  .titles{
+    @apply text-3xl font-extrabold mb-10
+  }
+}
+
+.navigation > nav{
+  display:flex;
+  align-items: center;
+  column-gap: 4px;
+}
+
+
