@@ -19,6 +19,11 @@
   .category-cards{
     @apply w-[calc((100vw-10rem-6rem)/4)] h-[19rem] bg-white rounded-3xl flex flex-col items-center justify-evenly flex-shrink-0 shadow-lg shadow-slate-400
   }
+
+  .recipe-smalltitle{
+    @apply text-lightColor font-bold text-lg py-3
+  }
+  
 }
 
 
@@ -33,6 +38,29 @@ img{
   width:100%;
   height:100%;
   object-fit:fill;
+}
+
+.recipe-icons  span{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 0.7rem;
+  background-color: #F54748 ;
+  padding:0.4rem 1rem;
+  border-radius: 3rem;
+  font-weight: bold;
+ 
+}
+
+.recipe-icons svg{
+  background-color: white;
+  border-radius: 100%;
+  padding:4px;
+  font-size: 1.5rem;
+}
+
+.recipe-icons p{
+  color:white;
 }
 
 .hide-scrollbar::-webkit-scrollbar {

@@ -21,8 +21,8 @@ const recipes = [
       "4. Drain the spaghetti and toss with pancetta and egg mixture off the heat.",
       "5. Season with salt and pepper and serve hot."
     ],
-    prepTime: "15 minutes",
-    cookTime: "10 minutes",
+    prepTime: "15 min",
+    cookTime: "10 min",
     servings: 2,
     count: 4
   },
@@ -51,8 +51,8 @@ const recipes = [
       "5. Pour into ramekins and bake for 10-12 minutes, until edges are set but center is still soft.",
       "6. Serve immediately, dusted with powdered sugar."
     ],
-    prepTime: "15 minutes",
-    cookTime: "12 minutes",
+    prepTime: "15 min",
+    cookTime: "12 min",
     servings: 4,
     count: 10
   },
@@ -85,8 +85,8 @@ const recipes = [
       "5. Stir in cream and grilled chicken, cook for 5 more minutes.",
       "6. Garnish with coriander and serve with naan or rice."
     ],
-    prepTime: "30 minutes (plus marination)",
-    cookTime: "25 minutes",
+    prepTime: "30 min",
+    cookTime: "25 min",
     servings: 4,
     count: 7
   },
@@ -112,8 +112,8 @@ const recipes = [
       "4. Toss the salad until well coated.",
       "5. Season with salt and pepper, and serve immediately."
     ],
-    prepTime: "10 minutes",
-    cookTime: "0 minutes",
+    prepTime: "10 min",
+    cookTime: "0 min",
     servings: 2,
     count: 5
   },
@@ -138,8 +138,8 @@ const recipes = [
       "3. Shake well and strain into the prepared glass over ice.",
       "4. Garnish with a lime wedge and serve."
     ],
-    prepTime: "5 minutes",
-    cookTime: "0 minutes",
+    prepTime: "5 min",
+    cookTime: "0 min",
     servings: 1,
     count: 8
   },
@@ -169,8 +169,8 @@ const recipes = [
       "5. Steam the dumplings for 10-12 minutes until cooked through.",
       "6. Serve with spicy dipping sauce."
     ],
-    prepTime: "30 minutes",
-    cookTime: "12 minutes",
+    prepTime: "30 min",
+    cookTime: "12 min",
     servings: 4,
     count: 6
   },
@@ -199,8 +199,8 @@ const recipes = [
       "4. Add lentils and water, simmer for 20 minutes until lentils are tender.",
       "5. Serve dal over rice, garnished with coriander."
     ],
-    prepTime: "15 minutes",
-    cookTime: "30 minutes",
+    prepTime: "15 min",
+    cookTime: "30 min",
     servings: 4,
     count: 10
   },
@@ -226,8 +226,8 @@ const recipes = [
       "4. Seal the edges and steam for 15-20 minutes until firm.",
       "5. Brush with ghee before serving."
     ],
-    prepTime: "30 minutes",
-    cookTime: "20 minutes",
+    prepTime: "30 min",
+    cookTime: "20 min",
     servings: 4,
     count: 5
   },
@@ -253,8 +253,8 @@ const recipes = [
       "4. Bake for 10-12 minutes until the crust is golden and cheese is melted.",
       "5. Top with fresh basil leaves, season with salt and pepper, and serve hot."
     ],
-    prepTime: "10 minutes",
-    cookTime: "12 minutes",
+    prepTime: "10 min",
+    cookTime: "12 min",
     servings: 2,
     count: 7
   },
@@ -284,8 +284,8 @@ const recipes = [
       "4. Fold into triangles and deep fry until golden brown.",
       "5. Serve hot with chutney."
     ],
-    prepTime: "30 minutes",
-    cookTime: "20 minutes",
+    prepTime: "30 min",
+    cookTime: "20 min",
     servings: 4,
     count: 10
   },
@@ -311,8 +311,8 @@ const recipes = [
       "3. Add milk and sugar, bring to a boil again.",
       "4. Strain into cups and serve hot."
     ],
-    prepTime: "5 minutes",
-    cookTime: "10 minutes",
+    prepTime: "5 min",
+    cookTime: "10 min",
     servings: 2,
     count: 8
   },
@@ -341,8 +341,8 @@ const recipes = [
       "4. Add paneer cubes and cook for another 5 minutes.",
       "5. Garnish with coriander and serve hot."
     ],
-    prepTime: "15 minutes",
-    cookTime: "20 minutes",
+    prepTime: "15 min",
+    cookTime: "20 min",
     servings: 4,
     count: 6
   }
