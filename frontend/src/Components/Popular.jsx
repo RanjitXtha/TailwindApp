@@ -1,15 +1,24 @@
-import React from 'react'
+import React from 'react';
+import { recipes } from '../data';
+import { Link } from 'react-router-dom';
 
 const Popular = () => {
+  const filteredRecipe = recipes.sort((a,b)=>b.count - a.count).slice(0,6);
   return (
-    <div className='padding'>
+    <div className='padding text-textColor'>
         <h1 className='titles'>Popular Recipes</h1>
-        <section>
-            <div className='w-[20rem] rounded-3xl shadow-lg shadow-slate-500 grid justify-center p-3'> 
-                <div className='w-[16rem] h-[16rem] bg-slate-400'></div>
-                <p className='mt-3 mb-3'>Title </p>
-                <p>Genre</p>
-            </div>
+        <section className='w-full flex flex-wrap justify-evenly gap-y-10 '>
+            {
+              filteredRecipe.map((element)=>(
+                <Link to={`/recipe/${element.id}`}>
+                <div className='w-[20rem] rounded-3xl shadow-2xl shadow-slate-300 grid justify-center p-5'> 
+                  <div className='w-[16rem] h-[16rem] bg-slate-400'></div>
+                  <p className='mt-3 mb-3 font-bold text-xl '>{element.title} </p>
+                  <p className='text-lightColor'>{element.category}</p>
+              </div>
+              </Link>
+              ))
+            }
         </section>
     </div>
   )
