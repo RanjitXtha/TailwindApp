@@ -40,8 +40,23 @@ const Recipe = () => {
             </div>
             <h1 className='recipe-smalltitle' >Description:</h1>
             <p>
-                    {currentRecipe.description}
-             </p>
+                {currentRecipe.description}
+            </p>
+
+            <h1 className='recipe-smalltitle'>Ingredients:</h1>
+            <div>
+                {currentRecipe.ingredients.map((ingredient)=>(
+                    <li>{ingredient}</li>
+                ))}
+            </div>
+
+            <h1 className='recipe-smalltitle'>Instructions:</h1>
+            <div>
+                {currentRecipe.instructions.map((instruction)=>(
+                    <li>{instruction}</li>
+                ))}
+
+            </div>
         </div>
 
         </section>  
