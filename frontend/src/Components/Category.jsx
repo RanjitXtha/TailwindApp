@@ -5,7 +5,7 @@ import dessert from '../assets/dessert.png';
 import drink from '../assets/drink.png';
 import local from '../assets/local.png';
 import popular from '../assets/popularr.png'
-import vergeterian from '../assets/vegeterian.avif'
+import vergeterian from '../assets/vegeterian.png'
 import western from '../assets/western.png'
 
 const Category = () => {
@@ -56,7 +56,7 @@ const Category = () => {
             {
                 categories.map((category)=>(
                     <div className='category-cards'>
-                        <div className='w-[6rem] h-[6rem] bg-customRed rounded-full p-3'><img src={category.img} alt="category"/></div>
+                        <div className='w-[5rem] h-[5rem] bg-customRed rounded-full p-3'><img src={category.img} alt="category"/></div>
                         <p className='font-bold text-xl'>{category.title}</p>
                         <p>{category.info}</p>
                         <div>

@@ -23,26 +23,51 @@ const Recipe = () => {
 
         { currentRecipe &&
 
-        <section className='padding flex gap-8 text-textColor'>
-        <div className='w-[30rem] h-[30rem] bg-slate-600'>
+        <section className='padding grid grid-cols-[1fr_1.3fr] gap-8 text-textColor'>
+        <div className='w-full h-[32.8rem] bg-slate-600'>
 
         </div>
-        <div>
-            <h1 className='font-bold text-4xl pb-2'>{currentRecipe.title}</h1>
+        <div className='w-full'>
+            <h1 className='font-bold text-4xl'>{currentRecipe.title}</h1>
             <h1 className='recipe-smalltitle'>{currentRecipe.category}</h1>
-            <div className='recipe-icons flex gap-5 text-lg'>
+            <div className='recipe-icons flex gap-3 text-lg'>
                 <span><FaHeart className='text-customRed' /><p>{currentRecipe.count}</p></span>
                 <span><FcClock /><p>{currentRecipe.prepTime}</p></span>
                 <span><GiCookingPot /><p>{currentRecipe.cookTime}</p></span>
-               
-
-            
             </div>
             <h1 className='recipe-smalltitle' >Description:</h1>
             <p>
                 {currentRecipe.description}
             </p>
 
+            <section className='grid grid-cols-[1fr_1.5fr] justify-between gap-5 mt-5 '>
+                <div className='w-full h-[17rem] px-4 pb-3 shadow-md shadow-slate-400 rounded-3xl'>
+                  <h1 className='recipe-smalltitle'>Ingredients</h1>
+
+                  {currentRecipe.ingredients.map((ingredient)=>(
+                    <div className='bg-customRed rounded-xl py-1 px-3 mb-3 text-white'>
+                    {ingredient}
+                  </div>
+                ))}
+                  
+                </div>
+  
+                <div className='w-full px-4 pb-3 shadow-md shadow-slate-400 rounded-3xl'>
+                  <h1 className='recipe-smalltitle'>Instruction</h1>
+
+                  {currentRecipe.instructions.map((instruction)=>(
+                    <div className='bg-customRed rounded-xl text-white py-1 px-3 mb-3'>
+                      {instruction}
+                    </div>
+                ))}
+                  
+                </div>
+            </section>
+
+            {
+              /*
+              
+              
             <h1 className='recipe-smalltitle'>Ingredients:</h1>
             <div>
                 {currentRecipe.ingredients.map((ingredient)=>(
@@ -57,6 +82,11 @@ const Recipe = () => {
                 ))}
 
             </div>
+              
+              
+              */
+            }
+
         </div>
 
         </section>  
