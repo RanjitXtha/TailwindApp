@@ -40,52 +40,27 @@ const Recipe = () => {
                 {currentRecipe.description}
             </p>
 
-            <section className='grid grid-cols-[1fr_1.5fr] justify-between gap-5 mt-5 '>
-                <div className='w-full h-[17rem] px-4 pb-3 shadow-md shadow-slate-400 rounded-3xl'>
+            <section className='flex flex-col justify-between gap-10 mt-5 '>
+                <div className='px-4 pb-3 shadow-md shadow-slate-400 rounded-3xl'>
                   <h1 className='recipe-smalltitle'>Ingredients</h1>
 
                   {currentRecipe.ingredients.map((ingredient)=>(
-                    <div className='bg-customRed rounded-xl py-1 px-3 mb-3 text-white'>
+                    <div className='bg-customRed rounded-2xl py-2 px-3 mb-3 text-white inline-block mr-3'>
                     {ingredient}
                   </div>
-                ))}
+                    ))}
                   
                 </div>
   
                 <div className='w-full px-4 pb-3 shadow-md shadow-slate-400 rounded-3xl'>
                   <h1 className='recipe-smalltitle'>Instruction</h1>
-
-                  {currentRecipe.instructions.map((instruction)=>(
-                    <div className='bg-customRed rounded-xl text-white py-1 px-3 mb-3'>
-                      {instruction}
-                    </div>
-                ))}
-                  
+                        {currentRecipe.instructions.map((instruction)=>(
+                        <div className='bg-customRed rounded-xl text-white py-1 px-3 mb-3'>
+                        {instruction}
+                        </div>
+                        ))}
                 </div>
             </section>
-
-            {
-              /*
-              
-              
-            <h1 className='recipe-smalltitle'>Ingredients:</h1>
-            <div>
-                {currentRecipe.ingredients.map((ingredient)=>(
-                    <li>{ingredient}</li>
-                ))}
-            </div>
-
-            <h1 className='recipe-smalltitle'>Instructions:</h1>
-            <div>
-                {currentRecipe.instructions.map((instruction)=>(
-                    <li>{instruction}</li>
-                ))}
-
-            </div>
-              
-              
-              */
-            }
 
         </div>
 
