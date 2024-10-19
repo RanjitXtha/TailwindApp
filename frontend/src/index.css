@@ -18,10 +18,15 @@
 
   .category-cards{
     @apply w-[calc((100vw-10rem-6rem)/4)] h-[19rem] bg-white rounded-3xl flex flex-col items-center justify-evenly flex-shrink-0 shadow-lg shadow-slate-400
+    hover:bg-customRed hover:text-white
   }
 
   .recipe-smalltitle{
     @apply text-lightColor font-bold text-lg mb-6
+  }
+
+  .scroll-button{
+    @apply w-16 absolute top-0 h-full text-5xl text-lightColor
   }
   
 }

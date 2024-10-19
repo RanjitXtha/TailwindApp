@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { MdArrowOutward } from "react-icons/md";
+import { FaChevronLeft } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 
 import dessert from '../assets/dessert.png';
 import drink from '../assets/drink.png';
@@ -47,26 +49,40 @@ const Category = () => {
           info: "Wholesome plant-based meals."
         }
       ];
+
+    const categorySlide = useRef(null);
+
+    const Scroll=(val)=>{
+     if(val==='left'){
+      categorySlide.current.scrollLeft -= 100;
+     }else if(val==='right'){
+      categorySlide.current.scrollLeft += 100;
+     }
+     
+    }
       
 
   return (
-    <div className='padding my-6 w-full '>
+    <div className='padding my-6 w-full relative'>
         <h1 className='titles'>Categories</h1>
-        <section className='flex overflow-x-scroll gap-5 px-3 pb-3 hide-scrollbar'>
+        <section ref={categorySlide}  className=' flex overflow-x-scroll gap-5 px-3 pb-3 hide-scrollbar'>
             {
                 categories.map((category)=>(
-                    <div className='category-cards'>
-                        <div className='w-[5rem] h-[5rem] bg-customRed rounded-full p-3'><img src={category.img} alt="category"/></div>
+                    <div className='category-cards group'>
+                        <div className='w-[5rem] h-[5rem] bg-customRed group-hover:bg-white transition-all rounded-full p-3'><img src={category.img} alt="category"/></div>
                         <p className='font-bold text-xl'>{category.title}</p>
                         <p>{category.info}</p>
                         <div>
-                            <button className='round-buttons px-4 py-3 mr-1'>See more</button>
-                            <button className='bg-customRed rounded-full p-4 text-white'><MdArrowOutward /></button>
+                            <button className='round-buttons group-hover:bg-white group-hover:text-textColor px-4 py-3 mr-1'>See more</button>
+                            <button className='bg-customRed group-hover:bg-white group-hover:text-textColor rounded-full p-4 text-white'><MdArrowOutward /></button>
                         </div>
                     </div>
                 ))
             }
+            
         </section>
+        <button onClick={()=>Scroll('left')} className='scroll-button left-[30px]'><FaChevronLeft/></button>
+        <button onClick={()=>Scroll('right')} className='scroll-button right-[30px]'><FaChevronRight/></button>
     </div>
   )
 }
