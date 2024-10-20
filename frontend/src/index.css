@@ -18,7 +18,7 @@
 
   .category-cards{
     @apply w-[calc((100vw-10rem-6rem)/4)] h-[19rem] bg-white rounded-3xl flex flex-col items-center justify-evenly flex-shrink-0 shadow-lg shadow-slate-400
-    hover:bg-customRed hover:text-white
+  
   }
 
   .recipe-smalltitle{
@@ -28,12 +28,16 @@
   .scroll-button{
     @apply w-16 absolute top-0 h-full text-5xl text-lightColor
   }
+
+  .hover-cards{
+    @apply text-white bg-customRed transition-all
+  }
   
 }
 
 
 
-.navigation > nav{
+.navigation > nav > a{
   display:flex;
   align-items: center;
   column-gap: 4px;

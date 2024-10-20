@@ -4,6 +4,8 @@ import { MdOutlineInventory2 } from "react-icons/md"
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoLogInOutline } from "react-icons/io5";
 
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
   return (
@@ -12,10 +14,10 @@ const Header = () => {
                 Foodie
             </div>
             <div className='navigation flex justify-evenly'>
-                <nav>Home <RiArrowDropDownLine className='text-customRed text-2xl'/></nav>
-                <nav>Category <RiArrowDropDownLine className='text-customRed text-2xl' /></nav>
-                <nav>Recipies <RiArrowDropDownLine className='text-customRed text-2xl' /></nav>
-                <nav>Contact< RiArrowDropDownLine className='text-customRed text-2xl' /></nav>
+                <nav><Link to="/">Home <RiArrowDropDownLine className='text-customRed text-2xl'/></Link></nav>
+                <nav><Link>Category <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
+                <nav><Link to="recipes">Recipies <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
+                <nav><Link>Contact< RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
             </div>
                     
             <div className='flex justify-end gap-8 text-xl'>

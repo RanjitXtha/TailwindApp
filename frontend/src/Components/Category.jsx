@@ -52,12 +52,14 @@ const Category = () => {
 
     const categorySlide = useRef(null);
 
-    const Scroll=(val)=>{
-     if(val==='left'){
-      categorySlide.current.scrollLeft -= 100;
-     }else if(val==='right'){
-      categorySlide.current.scrollLeft += 100;
-     }
+    const Scroll=(direction)=>{
+      const containerWidth = categorySlide.current.clientWidth;
+      const cardWidth = containerWidth / 4; // Since 4 cards are shown, divide by 4
+      if (direction === 'left') {
+        categorySlide.current.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      } else {
+        categorySlide.current.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      }
      
     }
       
@@ -65,10 +67,10 @@ const Category = () => {
   return (
     <div className='padding my-6 w-full relative'>
         <h1 className='titles'>Categories</h1>
-        <section ref={categorySlide}  className=' flex overflow-x-scroll gap-5 px-3 pb-3 hide-scrollbar'>
+        <section ref={categorySlide} className='flex overflow-x-scroll gap-5 px-3 py-3 hide-scrollbar'>
             {
                 categories.map((category)=>(
-                    <div className='category-cards group'>
+                    <div className='category-cards group hover:hover-cards'>
                         <div className='w-[5rem] h-[5rem] bg-customRed group-hover:bg-white transition-all rounded-full p-3'><img src={category.img} alt="category"/></div>
                         <p className='font-bold text-xl'>{category.title}</p>
                         <p>{category.info}</p>
@@ -81,8 +83,8 @@ const Category = () => {
             }
             
         </section>
-        <button onClick={()=>Scroll('left')} className='scroll-button left-[30px]'><FaChevronLeft/></button>
-        <button onClick={()=>Scroll('right')} className='scroll-button right-[30px]'><FaChevronRight/></button>
+        <button onClick={()=>Scroll('left')} className='scroll-button left-[1rem]'><FaChevronLeft/></button>
+        <button onClick={()=>Scroll('right')} className='scroll-button right-[0rem]'><FaChevronRight/></button>
     </div>
   )
 }
