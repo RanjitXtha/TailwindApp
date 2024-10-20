@@ -3,7 +3,7 @@ const recipes = [
     id: 1,
     title: "Spaghetti Carbonara",
     image: "https://via.placeholder.com/150?text=Spaghetti+Carbonara",
-    category: "Popular Recipes",
+    category: "Western",
     level: "Beginner",
     description: "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper. It's simple yet rich and creamy without any added cream.",
     ingredients: [
@@ -262,7 +262,7 @@ const recipes = [
     id: 10,
     title: "Samosa",
     image: "https://via.placeholder.com/150?text=Samosa",
-    category: "Popular Recipes",
+    category: "Western",
     level: "Intermediate",
     description: "A crispy pastry filled with spiced potatoes, peas, and onions, deep-fried to perfection. A favorite street food snack across South Asia.",
     ingredients: [

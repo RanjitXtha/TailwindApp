@@ -16,7 +16,7 @@ const Header = () => {
             <div className='navigation flex justify-evenly'>
                 <nav><Link to="/">Home <RiArrowDropDownLine className='text-customRed text-2xl'/></Link></nav>
                 <nav><Link>Category <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
-                <nav><Link to="recipes">Recipies <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
+                <nav><Link to="/recipes">Recipies <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
                 <nav><Link>Contact< RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
             </div>
                     
