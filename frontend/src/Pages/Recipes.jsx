@@ -3,11 +3,26 @@ import { recipes } from '../data';
 import Header from '../Components/Header';
 import { Link } from 'react-router-dom';
 
+import { FaFire } from "react-icons/fa";
+import { TbDumpling } from "react-icons/tb";
+import { GiDumplingBao } from "react-icons/gi";
+import { FaPizzaSlice } from "react-icons/fa6";
+import { RiDrinksFill } from "react-icons/ri";
+import { LuCakeSlice } from "react-icons/lu";
+import { GiCupcake } from "react-icons/gi";
+import { IoFastFood } from "react-icons/io5";
+
 const Recipes = () => {
 
+  const categories = [
+    {title:'Popular',img:<FaFire />},
+    {title:'Western',img:<FaPizzaSlice />},
+    {title:'Local',img:<GiDumplingBao />},
+    {title:'Drinks',img:<RiDrinksFill />},
+    {title:'Vegetarian',img:<LuCakeSlice />},
+  ]
+
   const [filteredRecipes , setfilteredRecipes]= useState(recipes);
-
-
   
   const setCategory=(category)=>{
     if(category==='All'){
@@ -32,13 +47,17 @@ const Recipes = () => {
     <section className='padding'>
       <h1 className='titles'>Recipes</h1>
 
-      <section className='flex justify-center'>
+      <section className='flex justify-center gap-5 mb-8'>
         <button onClick={()=>setCategory('All')}>All</button>
-        <button onClick={()=>setCategory('Dessert')}>Dessert</button>
-        <button onClick={()=>setCategory('Drinks')}>Drinks</button>
-        <button onClick={()=>setCategory('Western')}>Western Dishes</button>
-        <button onClick={()=>setCategory('Local')}>Local Favourites</button>
-        <button onClick={()=>setCategory('Vegetarian')}>Vegetarian</button>
+        {
+          categories.map(category=>(
+            <button onClick={()=>setCategory(category.title)} className='w-10 h-10
+            ring-4 ring-customRed  rounded-full p-1' >
+              <p>{category.img}</p>
+            </button>
+          ))
+        }
+        
       </section>
 
       <div className='flex flex-wrap justify-between'>
