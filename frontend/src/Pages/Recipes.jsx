@@ -56,7 +56,7 @@ const Recipes = () => {
         { 
           categories.map(category=>(
             <button key={category.title} onClick={()=>setCategory(category.title)} className={`${active===category.title?'bg-customRed text-white':'bg-customWhite'}
-            rounded-full px-4 py-3 flex items-center justify-center gap-3 `} >
+            rounded-full px-4 py-3 flex items-center justify-center gap-3 transition-all`} >
               <div>{category.img}</div>
               <div>{category.title}</div>
             </button>
