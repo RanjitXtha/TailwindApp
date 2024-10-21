@@ -65,7 +65,7 @@ const Recipes = () => {
         
       </section>
 
-      <div className='flex flex-wrap justify-between'>
+      <div className='flex flex-wrap justify-evenly'>
            {
               filteredRecipes && filteredRecipes.map((recipe)=>(
               <Link to={`/recipe/${recipe.id}`}>

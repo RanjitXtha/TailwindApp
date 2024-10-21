@@ -28,7 +28,7 @@ const Category = () => {
             {
                 categories.map((category)=>(
                     <div className='category-cards group hover:hover-cards'>
-                        <div className='w-[5rem] h-[5rem] bg-customRed group-hover:bg-white transition-all rounded-full p-3'><img src={category.img} alt="category"/></div>
+                        <div className='w-[5rem] h-[5rem] bg-customYellow group-hover:bg-white transition-all rounded-full p-3'><img src={category.img} alt="category"/></div>
                         <p className='font-bold text-xl'>{category.title}</p>
                         <p>{category.info}</p>
                         <div>
