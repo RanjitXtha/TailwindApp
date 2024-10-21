@@ -22,8 +22,8 @@ const Category = () => {
       
 
   return (
-    <div className='padding my-6 w-full relative'>
-        <h1 className='titles'>Categories</h1>
+    <div className='padding mb-14 w-full relative'>
+        <h1 className='titles'>Our Categories</h1>
         <section ref={categorySlide} className='flex overflow-x-scroll gap-5 px-3 py-3 hide-scrollbar'>
             {
                 categories.map((category)=>(

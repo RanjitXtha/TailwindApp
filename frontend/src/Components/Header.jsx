@@ -9,11 +9,11 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header className=' w-full grid grid-cols-[16rem_1fr_16rem] padding text-textColor'>
+    <header className='w-full grid grid-cols-[16rem_1fr_16rem] padding text-textColor font-bold '>
             <div className='flex items-center'>
                 Foodie
             </div>
-            <div className='navigation flex justify-evenly'>
+            <div className='navigation flex items-center justify-evenly'>
                 <nav><Link to="/">Home <RiArrowDropDownLine className='text-customRed text-2xl'/></Link></nav>
                 <nav><Link>Category <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
                 <nav><Link to="/recipes">Recipies <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
