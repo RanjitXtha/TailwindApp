@@ -14,6 +14,9 @@ import { IoFastFood } from "react-icons/io5";
 
 const Recipes = () => {
 
+  const [active , setActive] = useState('All');
+  
+
   const categories = [
     {title:'All',img:<IoFastFood />},
     {title:'Popular',img:<FaFire />},
@@ -26,6 +29,8 @@ const Recipes = () => {
   const [filteredRecipes , setfilteredRecipes]= useState(recipes);
   
   const setCategory=(category)=>{
+    setActive(category);
+    console.log(active)
     if(category==='All'){
       setfilteredRecipes(recipes);
     }else if(category === 'Popular'){
@@ -34,7 +39,6 @@ const Recipes = () => {
     }
     else{
       const filterData = recipes.filter(recipe=> recipe.category === category);
-      console.log(filterData);
       setfilteredRecipes(filterData);
     }
   
@@ -45,16 +49,16 @@ const Recipes = () => {
       <Header />
 
      
-    <section className='padding'>
-      <h1 className='titles'>Recipes</h1>
+    <section className='padding text-textColor'>
+      <h1 className='titles mb-2'>Recipes</h1>
 
-      <section className='flex justify-center gap-5 mb-8'>
-        <button onClick={()=>setCategory('All')}>All</button>
-        {
+      <section className='flex justify-center gap-5 mb-14 font-bold'>
+        { 
           categories.map(category=>(
-            <button onClick={()=>setCategory(category.title)} className='w-10 h-10
-            ring-4 ring-customRed  rounded-full p-1' >
-              <p>{category.img}</p>
+            <button key={category.title} onClick={()=>setCategory(category.title)} className={`${active===category.title?'bg-customRed text-white':'bg-customWhite'}
+            rounded-full px-4 py-3 flex items-center justify-center gap-3 `} >
+              <div>{category.img}</div>
+              <div>{category.title}</div>
             </button>
           ))
         }

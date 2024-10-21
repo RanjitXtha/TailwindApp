@@ -9,6 +9,7 @@ module.exports = {
         customRed:'#F54748',
         textColor: '#2E2E2E',
         lightColor: '#616161',
+        customWhite: '#F7F7F7',
       },
     },
   },
