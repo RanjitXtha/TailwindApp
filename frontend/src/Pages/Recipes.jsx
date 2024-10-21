@@ -15,6 +15,7 @@ import { IoFastFood } from "react-icons/io5";
 const Recipes = () => {
 
   const categories = [
+    {title:'All',img:<IoFastFood />},
     {title:'Popular',img:<FaFire />},
     {title:'Western',img:<FaPizzaSlice />},
     {title:'Local',img:<GiDumplingBao />},
