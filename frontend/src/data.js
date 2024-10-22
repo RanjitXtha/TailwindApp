@@ -6,11 +6,24 @@ import vergeterian from './assets/vegeterian.png'
 import western from './assets/western.png'
 
 
+import caesarSalad from './assets/FoodPics/caesarsalad.png';
+import chocolatecake from './assets/FoodPics/cake.png';
+import chickentikkamasala from './assets/FoodPics/chickentikkamasala.png';
+import dalbhat from './assets/FoodPics/dalbhat.png'
+import masalachai from './assets/FoodPics/masalachai.png'
+import margarita from './assets/FoodPics/margarita.png'
+import margaritapizza from './assets/FoodPics/margaritapizza.png'
+import momo from './assets/FoodPics/momo.png'
+import paneerbutter from './assets/FoodPics/paneerbuttermasala.png'
+import samosa from './assets/FoodPics/samosa.png'
+import yomari from './assets/FoodPics/yomari.png';
+import spagetticarbonara from './assets/FoodPics/spagetticarbonara.png'
+
 const recipes = [
   {
     id: 1,
     title: "Spaghetti Carbonara",
-    image: "https://via.placeholder.com/150?text=Spaghetti+Carbonara",
+    image: spagetticarbonara,
     category: "Western",
     level: "Beginner",
     description: "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper. It's simple yet rich and creamy without any added cream.",
@@ -37,7 +50,7 @@ const recipes = [
   {
     id: 2,
     title: "Chocolate Lava Cake",
-    image: "https://via.placeholder.com/150?text=Chocolate+Lava+Cake",
+    image: chocolatecake,
     category: "Dessert",
     level: "Intermediate",
     description: "A rich and decadent dessert featuring a soft chocolate cake exterior with a warm, gooey chocolate center.",
@@ -67,7 +80,7 @@ const recipes = [
   {
     id: 3,
     title: "Chicken Tikka Masala",
-    image: "https://via.placeholder.com/150?text=Chicken+Tikka+Masala",
+    image: chickentikkamasala,
     category: "Local",
     level: "Expert",
     description: "A popular Indian dish with grilled chicken chunks in a spiced tomato cream sauce, known for its rich flavor and complex spice profile.",
@@ -101,7 +114,7 @@ const recipes = [
   {
     id: 4,
     title: "Caesar Salad",
-    image: "https://via.placeholder.com/150?text=Caesar+Salad",
+    image: caesarSalad,
     category: "Vegetarian",
     level: "Beginner",
     description: "A refreshing salad made with romaine lettuce, croutons, and parmesan, tossed in a tangy Caesar dressing.",
@@ -128,7 +141,7 @@ const recipes = [
   {
     id: 5,
     title: "Margarita",
-    image: "https://via.placeholder.com/150?text=Margarita",
+    image: margarita,
     category: "Drinks",
     level: "Intermediate",
     description: "A classic cocktail made with tequila, lime juice, and triple sec, served with a salted rim.",
@@ -154,7 +167,7 @@ const recipes = [
   {
     id: 6,
     title: "Momo (Nepalese Dumplings)",
-    image: "https://via.placeholder.com/150?text=Momo",
+    image: momo,
     category: "Local",
     level: "Intermediate",
     description: "Momo is a popular Nepalese dish, consisting of steamed dumplings filled with minced meat or vegetables, served with a tangy dipping sauce.",
@@ -185,7 +198,7 @@ const recipes = [
   {
     id: 7,
     title: "Dal Bhat",
-    image: "https://via.placeholder.com/150?text=Dal+Bhat",
+    image: dalbhat,
     category: "Local",
     level: "Beginner",
     description: "A staple meal in Nepal, Dal Bhat consists of steamed rice (bhat) and lentil soup (dal), often accompanied by vegetable curry and pickles.",
@@ -214,8 +227,8 @@ const recipes = [
   },
   {
     id: 8,
-    title: "Yomari (Sweet Nepalese Dumpling)",
-    image: "https://via.placeholder.com/150?text=Yomari",
+    title: "Yomari",
+    image: yomari,
     category: "Local",
     level: "Expert",
     description: "A traditional Nepalese sweet dumpling filled with molasses and sesame seeds, popular during the Yomari Punhi festival.",
@@ -242,7 +255,7 @@ const recipes = [
   {
     id: 9,
     title: "Margarita Pizza",
-    image: "https://via.placeholder.com/150?text=Margarita+Pizza",
+    image: margaritapizza,
     category: "Western",
     level: "Beginner",
     description: "A classic Italian pizza topped with fresh tomatoes, mozzarella cheese, and basil leaves, representing the colors of the Italian flag.",
@@ -269,7 +282,7 @@ const recipes = [
   {
     id: 10,
     title: "Samosa",
-    image: "https://via.placeholder.com/150?text=Samosa",
+    image: samosa,
     category: "Western",
     level: "Intermediate",
     description: "A crispy pastry filled with spiced potatoes, peas, and onions, deep-fried to perfection. A favorite street food snack across South Asia.",
@@ -300,7 +313,7 @@ const recipes = [
   {
     id: 11,
     title: "Masala Chai",
-    image: "https://via.placeholder.com/150?text=Masala+Chai",
+    image: masalachai ,
     category: "Drinks",
     level: "Beginner",
     description: "A spiced tea brewed with milk, tea leaves, and a mixture of spices like cardamom, cinnamon, and ginger. A comforting drink often enjoyed in South Asia.",
@@ -327,7 +340,7 @@ const recipes = [
   {
     id: 12,
     title: "Paneer Butter Masala",
-    image: "https://via.placeholder.com/150?text=Paneer+Butter+Masala",
+    image: paneerbutter,
     category: "Vegetarian",
     level: "Intermediate",
     description: "A rich and creamy dish made with paneer cubes simmered in a spiced tomato and cream sauce, perfect for pairing with naan or rice.",

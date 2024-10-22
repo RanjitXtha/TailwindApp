@@ -3,11 +3,8 @@ import Burger from '../assets/burger.png'
 
 const Services = () => {
   return (
-    <div className='padding my-14 '>
+    <div className='padding my-32 '>
         <section className=' w-full flex flex-row  items-center h-64 rounded-3xl bg-customYellow'>
-           
-             
-            
               <div>
               <img src={Burger} className='w-[28rem] h-[150%]' />
 
