@@ -45,7 +45,7 @@ const recipes = [
     prepTime: "15 min",
     cookTime: "10 min",
     servings: 2,
-    count: 4
+    count: 8
   },
   {
     id: 2,
@@ -75,7 +75,7 @@ const recipes = [
     prepTime: "15 min",
     cookTime: "12 min",
     servings: 4,
-    count: 10
+    count: 11
   },
   {
     id: 3,
@@ -109,7 +109,7 @@ const recipes = [
     prepTime: "30 min",
     cookTime: "25 min",
     servings: 4,
-    count: 7
+    count: 13
   },
   {
     id: 4,
@@ -162,7 +162,7 @@ const recipes = [
     prepTime: "5 min",
     cookTime: "0 min",
     servings: 1,
-    count: 8
+    count: 7
   },
   {
     id: 6,
@@ -193,7 +193,7 @@ const recipes = [
     prepTime: "30 min",
     cookTime: "12 min",
     servings: 4,
-    count: 6
+    count: 15
   },
   {
     id: 7,
@@ -223,7 +223,7 @@ const recipes = [
     prepTime: "15 min",
     cookTime: "30 min",
     servings: 4,
-    count: 10
+    count: 6
   },
   {
     id: 8,
@@ -277,7 +277,7 @@ const recipes = [
     prepTime: "10 min",
     cookTime: "12 min",
     servings: 2,
-    count: 7
+    count: 8
   },
   {
     id: 10,
@@ -335,7 +335,7 @@ const recipes = [
     prepTime: "5 min",
     cookTime: "10 min",
     servings: 2,
-    count: 8
+    count: 13
   },
   {
     id: 12,
@@ -365,7 +365,7 @@ const recipes = [
     prepTime: "15 min",
     cookTime: "20 min",
     servings: 4,
-    count: 6
+    count: 8
   }
 ];
 

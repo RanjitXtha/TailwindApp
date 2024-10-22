@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header className='w-full grid grid-cols-[16rem_1fr_16rem] padding text-textColor font-bold '>
+    <header className='relative w-full grid grid-cols-[16rem_1fr_16rem] padding text-textColor font-bold '>
             <div className='flex items-center'>
                 Foodie
             </div>
@@ -24,6 +24,10 @@ const Header = () => {
                 <button><IoSearch /></button>
                 <button>< MdOutlineInventory2 /></button>
                 <button className='text-base flex items-center gap-2 round-buttons py-2 px-4'><IoLogInOutline />Login</button>
+            </div>
+
+            <div className='absolute right-0 mr-[5rem] mt-[4.2rem] rounded-2xl w-[25rem] h-8 bg-cyan-600'>
+
             </div>
     </header>
   )

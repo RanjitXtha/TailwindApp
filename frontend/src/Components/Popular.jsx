@@ -3,7 +3,7 @@ import { recipes } from '../data';
 import { Link } from 'react-router-dom';
 
 const Popular = () => {
-  const filteredRecipe = recipes.sort((a,b)=>b.count - a.count).slice(0,6);
+  const filteredRecipe = [...recipes].sort((a,b)=>b.count - a.count).slice(0,6);
   return (
     <div className='padding text-textColor'>
         <h1 className='titles'>Popular Recipes</h1>

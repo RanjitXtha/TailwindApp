@@ -9,7 +9,6 @@ import { GiDumplingBao } from "react-icons/gi";
 import { FaPizzaSlice } from "react-icons/fa6";
 import { RiDrinksFill } from "react-icons/ri";
 import { LuCakeSlice } from "react-icons/lu";
-import { GiCupcake } from "react-icons/gi";
 import { IoFastFood } from "react-icons/io5";
 
 const Recipes = () => {
@@ -30,15 +29,14 @@ const Recipes = () => {
   
   const setCategory=(category)=>{
     setActive(category);
-    console.log(active)
-    if(category==='All'){
-      setfilteredRecipes(recipes);
+    if(category ==='All'){
+      setfilteredRecipes([...recipes]);
     }else if(category === 'Popular'){
-      const filterData = recipes.sort((a,b)=>b.count - a.count);
+      const filterData = [...recipes].sort((a,b)=>b.count - a.count);
       setfilteredRecipes(filterData);
     }
     else{
-      const filterData = recipes.filter(recipe=> recipe.category === category);
+      const filterData = [...recipes].filter(recipe=> recipe.category === category);
       setfilteredRecipes(filterData);
     }
   
