@@ -2,8 +2,6 @@ import React, { useRef } from 'react'
 import { MdArrowOutward } from "react-icons/md";
 import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
-import { FaHeart } from "react-icons/fa";
-
 
 import { categories } from '../data';
 
@@ -29,8 +27,7 @@ const Category = () => {
         <section ref={categorySlide} className='flex overflow-x-scroll gap-5 px-3 py-3 hide-scrollbar'>
             {
                 categories.map((category)=>(
-                    <div className='relative category-cards group hover:hover-cards'>
-                        <div className='absolute right-0 top-0 m-5'><FaHeart className='' /></div>
+                    <div className='category-cards group hover:hover-cards'>      
                         <div className='w-[5rem] h-[5rem] bg-customYellow group-hover:bg-white transition-all rounded-full p-3'><img src={category.img} alt="category"/></div>
                         <p className='font-bold text-xl'>{category.title}</p>
                         <p>{category.info}</p>

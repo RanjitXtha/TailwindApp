@@ -11,6 +11,7 @@ module.exports = {
         lightColor: '#616161',
         customWhite: '#F7F7F7',
         customYellow: '#FFECC9',
+        lightRed: '#FCE3E3',
       },
     },
   },

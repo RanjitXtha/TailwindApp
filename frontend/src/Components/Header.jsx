@@ -14,7 +14,9 @@ import { recipes } from '../data';
 const Header = () => {
   const [filterResult , setFilterResult] = useState(null);
   const searchRef = useRef(null);
+  const favouriteRef = useRef(null);
   const [searchVisibility , setSearchVisibility] = useState(false);
+  const [favVisibility , setFavisibility] = useState(false);
 
   const handleClickOutside = (event) => {
     if (searchRef.current && !searchRef.current.contains(event.target)) {
@@ -23,6 +25,13 @@ const Header = () => {
     }
   };
 
+  const handleClickFav = (e)=>{
+    if(favouriteRef.current && !favouriteRef.current.contains(e.target)){
+      setFavisibility(false);
+    }
+
+  }
+
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
 
@@ -30,6 +39,13 @@ const Header = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  useEffect(()=>{
+    document.addEventListener("mousedown",handleClickFav);
+    return ()=>{
+      document.removeEventListener("mousedown",handleClickFav);
+    }
+  })
 
 
   const handleSearch = (e)=>{
@@ -66,7 +82,7 @@ const Header = () => {
                     
             <div className='flex justify-end gap-8 text-xl'>
                 <button onClick={()=>setSearchVisibility(!searchVisibility)}><IoSearch /></button>
-                <button>< MdOutlineInventory2 /></button>
+                <button onClick={()=>setFavisibility(!favVisibility)}>< MdOutlineInventory2 /></button>
                 <button className='text-base flex items-center gap-2 round-buttons py-2 px-4'><IoLogInOutline />Login</button>
             </div>
 {
@@ -98,12 +114,13 @@ const Header = () => {
             </div>
             }
 {
-  /* <div className='absolute right-0 mr-[5rem] mt-[4.2rem] rounded-2xl w-[25rem] bg-red-200 shadow-slate-500 shadow-md p-2 z-50'>
+  favVisibility &&
+  <div ref={favouriteRef} className=' absolute right-0 mr-[5rem] mt-[4.2rem] rounded-2xl w-[25rem] bg-red-200 shadow-slate-500 shadow-md p-2 z-50'>
 
-      </div>
-  
-  */
+  </div>
 }
+
+
      
     </header>
   )
