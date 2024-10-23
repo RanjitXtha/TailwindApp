@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { IoSearch } from "react-icons/io5";
 import { MdOutlineInventory2 } from "react-icons/md"
 import { RiArrowDropDownLine } from "react-icons/ri";
@@ -11,7 +11,11 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { recipes } from '../data';
 
+import { FavouriteContext } from '../context/favourite';
+
 const Header = () => {
+  const {favourite} = useContext(FavouriteContext);
+
   const [filterResult , setFilterResult] = useState(null);
   const searchRef = useRef(null);
   const favouriteRef = useRef(null);
@@ -116,7 +120,13 @@ const Header = () => {
 {
   favVisibility &&
   <div ref={favouriteRef} className=' absolute right-0 mr-[5rem] mt-[4.2rem] rounded-2xl w-[25rem] bg-red-200 shadow-slate-500 shadow-md p-2 z-50'>
-
+    {
+      favourite && favourite.map((recipe)=>(
+        <div>
+          <p>recipe.title</p>
+        </div>
+      ))
+    }
   </div>
 }
 
