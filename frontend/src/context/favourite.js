@@ -3,9 +3,17 @@ import { favReducer } from './Reducer/facreducer';
 
 export const FavouriteContext = createContext();
 
-export const FavouriteProvider = ({children})=>{
+const initFavorites = () => {
+    const savedFavorites = localStorage.getItem('favorites');
+    return savedFavorites ? JSON.parse(savedFavorites) : [];
+  };
 
-    const [state , dispatch] = useReducer(favReducer , [])
+export const FavouriteProvider = ({children})=>{
+    const [state , dispatch] = useReducer(favReducer , [] , initFavorites)
+
+    useEffect(() => {
+        localStorage.setItem('favorites', JSON.stringify(state));
+      }, [state]);
 
     const addFav = (recipe)=>{
         dispatch({type:'ADD',payload:recipe})
@@ -20,7 +28,7 @@ export const FavouriteProvider = ({children})=>{
     }
 
     return(
-        <FavouriteContext.Provider value={{favourties:state, addFav , removeFav , clearFav}}>
+        <FavouriteContext.Provider value={{favourites:state, addFav , removeFav , clearFav}}>
             {children}
         </FavouriteContext.Provider>
     )

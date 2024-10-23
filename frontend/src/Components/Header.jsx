@@ -7,6 +7,7 @@ import { FaClock, FaHeart } from "react-icons/fa";
 import { FcClock } from "react-icons/fc";
 import { ImSpoonKnife } from "react-icons/im";
 import { useRef } from 'react';
+import { IoIosCloseCircle } from "react-icons/io";
 
 import { Link } from 'react-router-dom';
 import { recipes } from '../data';
@@ -14,7 +15,7 @@ import { recipes } from '../data';
 import { FavouriteContext } from '../context/favourite';
 
 const Header = () => {
-  const {favourite} = useContext(FavouriteContext);
+  const {favourites ,removeFav} = useContext(FavouriteContext);
 
   const [filterResult , setFilterResult] = useState(null);
   const searchRef = useRef(null);
@@ -119,12 +120,33 @@ const Header = () => {
             }
 {
   favVisibility &&
-  <div ref={favouriteRef} className=' absolute right-0 mr-[5rem] mt-[4.2rem] rounded-2xl w-[25rem] bg-red-200 shadow-slate-500 shadow-md p-2 z-50'>
+  <div ref={favouriteRef} className=' absolute right-0 mr-[5rem] mt-[4.2rem] rounded-2xl w-[25rem] bg-white shadow-slate-500 shadow-md p-2 z-50'>
     {
-      favourite && favourite.map((recipe)=>(
-        <div>
-          <p>recipe.title</p>
+      favourites && favourites.map((recipe)=>(
+        <Link to={`/recipe/${recipe.id}`}>
+        <div className='flex gap-4 mb-2 relative'>
+          <button onClick={
+            (e)=>{
+              e.preventDefault();
+              e.stopPropagation();
+              removeFav(recipe);
+            }
+          } className='absolute right-0 top-0 text-customRed text-2xl'>
+            <IoIosCloseCircle />
+          </button>
+          <div className='w-16 h-16'>
+            <img src={recipe.image} alt={recipe.title} />
+          </div>
+          <div>
+            <p>{recipe.title}</p>
+            <div className='flex gap-5 text-lightColor text-sm'>
+              <p className='flex gap-2 items-center'><ImSpoonKnife />{recipe.servings}</p>
+              <p className='flex gap-2 items-center'><FaClock />{recipe.cookTime}</p>
+              <p className='flex gap-2 items-center'><FaHeart />{recipe.count}</p>
+            </div>
+          </div> 
         </div>
+        </Link>
       ))
     }
   </div>

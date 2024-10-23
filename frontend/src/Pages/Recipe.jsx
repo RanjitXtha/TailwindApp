@@ -10,7 +10,6 @@ const Recipe = () => {
     const [currentRecipe , setRecipe] = useState(null)
     const {id} = useParams();
     const recipeId = Number(id)
-    console.log(recipeId)
 
     useEffect(()=>{
         const result = recipes.find(recipe => recipe.id===recipeId)

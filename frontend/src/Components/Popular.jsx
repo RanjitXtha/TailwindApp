@@ -9,7 +9,7 @@ import { FavouriteContext } from '../context/favourite';
 import { useContext } from 'react';
 
 const Popular = () => {
-  const {addFav} = useContext(FavouriteContext);
+  const {addFav , favourites} = useContext(FavouriteContext);
   
   const filteredRecipe = [...recipes].sort((a,b)=>b.count - a.count).slice(0,6);
   return (
@@ -20,8 +20,21 @@ const Popular = () => {
               filteredRecipe.map((element)=>(
                 <Link to={`/recipe/${element.id}`}>
                 <div className='relative group w-[20rem] rounded-3xl shadow-lg shadow-slate-400 grid justify-center p-5 hover:hover-cards'> 
-                <button onClick={()=>addFav(element)} className='absolute right-0 top-0 m-4 p-2 text-2xl rounded-full group-hover:bg-white'>
-                  <FaRegHeart className='text-lightColor' />
+                <button onClick={(e)=>{
+                  e.preventDefault();
+                  e.stopPropagation();
+                  addFav(element);
+                  }
+                  } className='absolute right-0 top-0 m-4 p-2 text-2xl rounded-full group-hover:bg-white'>
+
+{
+              favourites.some(fav => fav.id === element.id) ? (
+                <FaHeart className='text-customRed' />  // Filled heart if it's a favorite
+              ) : (
+                <FaRegHeart className='text-lightColor' />  // Regular heart if it's not
+              )
+            }
+
                 </button>
                   <div className='w-[16rem] h-[16rem]'>
                     <img src={element.image} alt={element.title} />
