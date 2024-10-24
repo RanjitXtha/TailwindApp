@@ -4,6 +4,11 @@
 
 
 @layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
   .padding{
     @apply px-[5rem] py-4
   }

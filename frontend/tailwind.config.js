@@ -14,7 +14,8 @@ module.exports = {
         lightRed: '#FCE3E3',
       },
       screens:{
-        'custom-md':'1100px'
+        'custom-md':'1100px',
+        'hero-md':'900px',
       }
     },
   },
