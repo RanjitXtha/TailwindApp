@@ -13,6 +13,9 @@ module.exports = {
         customYellow: '#FFECC9',
         lightRed: '#FCE3E3',
       },
+      screens:{
+        'custom-md':'1100px'
+      }
     },
   },
   plugins: [],

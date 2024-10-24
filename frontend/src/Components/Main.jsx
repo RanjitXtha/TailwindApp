@@ -5,7 +5,7 @@ import { FaFacebook } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaTwitter } from "react-icons/fa";
 
-import hero from '../assets/file.png'
+import hero from '../assets/hero.png'
 import rename from '../assets/rename.png'
 
 const Main = () => {
@@ -30,8 +30,8 @@ const Main = () => {
 
             </div>
 
-            <div className='absolute bg-cyan-500 w-[50%] h-[70%] right-0 top-0 mr-[5rem] z-[-1]'>
-                  <img src={rename} alt="image" />
+            <div className='absolute w-[50%]  h-full right-0 top-0 mr-[5rem] z-[-1]'>
+                  <img src={hero} alt="image" />
             </div>
            
     </section>

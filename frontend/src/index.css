@@ -16,8 +16,9 @@
     @apply text-4xl font-extrabold mb-14 text-textColor
   }
 
-  .category-cards{
-    @apply w-[calc((100vw-10rem-6rem)/4)] h-[19rem] bg-white rounded-3xl flex flex-col items-center justify-evenly flex-shrink-0 shadow-lg shadow-slate-400
+  .category-cards{ /*10 rem for padding , 1.25 for each gap. query uses the point or greater. md means effect applies for 768 or higher*/
+    @apply  h-[19rem] w-[calc((100vw-10rem-2.25rem))] sm:w-[calc((100vw-10rem-3.5rem)/2)] md:w-[calc((100vw-10rem-4.75rem)/3)] custom-md:w-[calc((100vw-10rem-6rem)/4)] 2xl:w-[calc((100vw-10rem-7.25rem)/5)]
+     text-center p-2 bg-white rounded-3xl flex flex-col items-center justify-evenly flex-shrink-0 shadow-lg shadow-slate-400
   
   }
 
