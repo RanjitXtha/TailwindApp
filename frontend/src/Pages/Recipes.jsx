@@ -11,10 +11,29 @@ import { RiDrinksFill } from "react-icons/ri";
 import { LuCakeSlice } from "react-icons/lu";
 import { IoFastFood } from "react-icons/io5";
 
+import { FaHeart } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
+
+
+import { FavouriteContext } from '../context/favourite';
+import { useContext } from 'react';
+
+import { useLocation } from 'react-router-dom';
+
 const Recipes = () => {
 
   const [active , setActive] = useState('All');
-  
+  const {addFav , favourites} = useContext(FavouriteContext);
+  const location = useLocation();
+  const getQueryParams = (param)=>{
+    const searchParams = new URLSearchParams(location.search);
+    return searchParams.get(param);
+  }
+
+  useEffect(() => {
+    const category = getQueryParams('category') || 'All'; // Default to 'All' if no category is passed
+    setCategory(category);
+  }, [location.search]);
 
   const categories = [
     {title:'All',img:<IoFastFood />},
@@ -23,6 +42,7 @@ const Recipes = () => {
     {title:'Local',img:<GiDumplingBao />},
     {title:'Drinks',img:<RiDrinksFill />},
     {title:'Vegetarian',img:<LuCakeSlice />},
+    {title:'Desserts',img:<LuCakeSlice />}
   ]
 
   const [filteredRecipes , setfilteredRecipes]= useState(recipes);
@@ -67,7 +87,23 @@ const Recipes = () => {
            {
               filteredRecipes && filteredRecipes.map((recipe)=>(
               <Link to={`/recipe/${recipe.id}`}>
-                <div className='mb-[5rem] group w-[20rem] rounded-3xl shadow-lg shadow-slate-400 grid justify-center p-5 hover:hover-cards'> 
+                <div className='relative mb-[5rem] group w-[20rem] rounded-3xl shadow-lg shadow-slate-400 grid justify-center p-5 hover:hover-cards'>
+                <button onClick={(e)=>{
+                  e.preventDefault();
+                  e.stopPropagation();
+                  addFav(recipe);
+                  }
+                  } className='absolute right-0 top-0 m-4 p-2 text-2xl rounded-full group-hover:bg-white'>
+
+{
+              favourites.some(fav => fav.id === recipe.id) ? (
+                <FaHeart className='text-customRed' />  // Filled heart if it's a favorite
+              ) : (
+                <FaRegHeart className='text-lightColor' />  // Regular heart if it's not
+              )
+            }
+
+                </button> 
                   <div className='w-[16rem] h-[16rem]'>
                     <img src={recipe.image} alt={recipe.title} />
                   </div>

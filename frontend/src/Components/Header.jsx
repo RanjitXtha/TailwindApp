@@ -87,7 +87,17 @@ const Header = () => {
                     
             <div className='flex justify-end gap-8 text-xl'>
                 <button onClick={()=>setSearchVisibility(!searchVisibility)}><IoSearch /></button>
-                <button onClick={()=>setFavisibility(!favVisibility)}>< MdOutlineInventory2 /></button>
+                <button onClick={()=>setFavisibility(!favVisibility)} className='relative'>< MdOutlineInventory2 />
+                {
+                  (favourites.length !==0)?<p className='absolute w-5 h-5 p-2 flex items-center justify-center rounded-full bg-customRed top-0 right-[-15px] text-sm text-white'>
+                  {
+                    favourites.length
+                  }
+                </p>:null
+
+                }
+                  
+                </button>
                 <button className='text-base flex items-center gap-2 round-buttons py-2 px-4'><IoLogInOutline />Login</button>
             </div>
 {
@@ -122,7 +132,8 @@ const Header = () => {
   favVisibility &&
   <div ref={favouriteRef} className=' absolute right-0 mr-[5rem] mt-[4.2rem] rounded-2xl w-[25rem] bg-white shadow-slate-500 shadow-md p-2 z-50'>
     {
-      favourites && favourites.map((recipe)=>(
+    
+      (favourites.length !== 0)? favourites.map((recipe)=>(
         <Link to={`/recipe/${recipe.id}`}>
         <div className='flex gap-4 mb-2 relative'>
           <button onClick={
@@ -147,7 +158,7 @@ const Header = () => {
           </div> 
         </div>
         </Link>
-      ))
+      )):<p className='text-lightColor text-sm'>No recipe has been added to your favourites</p>
     }
   </div>
 }

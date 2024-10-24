@@ -4,9 +4,9 @@ import Burger from '../assets/burger.png'
 const Services = () => {
   return (
     <div className='padding my-32 '>
-        <section className=' w-full flex flex-row  items-center h-64 rounded-3xl bg-customYellow'>
-              <div className='w-[20rem] h-full relative'>
-                <img src={Burger} className='absolute top-0 left-0 w-[32rem]' />
+        <section className=' w-full flex flex-row  items-center h-72 rounded-3xl bg-customYellow'>
+              <div className='w-[30rem] h-full relative'>
+                <img src={Burger} className='absolute scale-[1.6] scale-x-[1.9] top-0 left-0 ' />
               </div>
 
 

@@ -372,9 +372,9 @@ const recipes = [
 const categories = [
   {
     id: 1,
-    title: "Popular Recipes",
+    title: "Popular",
     img: popular,
-    info: "Tried and loved by many."
+    info: "Tried and loved by many.",
   },
   {
     id: 2,
@@ -390,13 +390,13 @@ const categories = [
   },
   {
     id: 4,
-    title: "Western Dishes",
+    title: "Western",
     img: western,
     info: "Famous dishes from the West."
   },
   {
     id: 5,
-    title: "Local Favorites",
+    title: "Local",
     img: local,
     info: "Traditional and regional delights."
   },
