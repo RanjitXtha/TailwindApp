@@ -13,7 +13,7 @@ const Popular = () => {
   
   const filteredRecipe = [...recipes].sort((a,b)=>b.count - a.count).slice(0,6);
   return (
-    <div className='padding text-textColor'>
+    <div className='padding text-textColor max-container'>
         <h1 className='titles'>Popular Recipes</h1>
         <section className='w-full flex flex-wrap justify-evenly gap-y-10 gap-x-4 '>
             {

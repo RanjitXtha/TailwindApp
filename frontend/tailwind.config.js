@@ -16,6 +16,7 @@ module.exports = {
       screens:{
         'custom-md':'1100px',
         'hero-md':'900px',
+        'service-md':'830px'
       }
     },
   },

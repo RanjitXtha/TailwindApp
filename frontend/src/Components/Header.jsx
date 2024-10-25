@@ -74,11 +74,11 @@ const Header = () => {
 
   }
   return (
-    <header className='relative w-full grid grid-cols-[16rem_1fr_16rem] padding text-textColor font-bold '>
+    <header className='relative w-full grid grid-cols-[10%_1fr_16%] gap-6 padding text-textColor font-bold  max-container'>
             <div className='flex items-center'>
                 Foodie
             </div>
-            <div className='navigation flex items-center justify-evenly'>
+            <div className='navigation  hidden md:flex items-center justify-evenly'>
                 <nav><Link to="/">Home <RiArrowDropDownLine className='text-customRed text-2xl'/></Link></nav>
                 <nav><Link>Category <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
                 <nav><Link to="/recipes">Recipies <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
