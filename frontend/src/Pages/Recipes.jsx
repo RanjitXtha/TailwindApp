@@ -70,7 +70,7 @@ const Recipes = () => {
     <section className='padding text-textColor'>
       <h1 className='titles mb-2'>Recipes</h1>
 
-      <section className='flex justify-center gap-5 mb-14 font-bold'>
+      <section className='flex justify-evenly flex-wrap mb-14 font-bold'>
         { 
           categories.map(category=>(
             <button key={category.title} onClick={()=>setCategory(category.title)} className={`${active===category.title?'bg-customRed text-white':'bg-customWhite'}

@@ -8,6 +8,7 @@ import { FcClock } from "react-icons/fc";
 import { ImSpoonKnife } from "react-icons/im";
 import { useRef } from 'react';
 import { IoIosCloseCircle } from "react-icons/io";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 import { Link } from 'react-router-dom';
 import { recipes } from '../data';
@@ -22,11 +23,16 @@ const Header = () => {
   const favouriteRef = useRef(null);
   const [searchVisibility , setSearchVisibility] = useState(false);
   const [favVisibility , setFavisibility] = useState(false);
+  const [hamburgerMenu , sethambugerMenu] = useState(false)
 
   const handleClickOutside = (event) => {
-    if (searchRef.current && !searchRef.current.contains(event.target)) {
+    if ((searchRef.current && !searchRef.current.contains(event.target))
+    ||favouriteRef.current && !favouriteRef.current.contains(event.target)
+    ) {
       setSearchVisibility(false);
       setFilterResult(null);
+      setFavisibility(false);
+      sethambugerMenu(false);
     }
   };
 
@@ -46,17 +52,16 @@ const Header = () => {
   }, []);
 
   useEffect(()=>{
-    document.addEventListener("mousedown",handleClickFav);
+    document.addEventListener("mousedown",handleClickOutside);
     return ()=>{
-      document.removeEventListener("mousedown",handleClickFav);
+      document.removeEventListener("mousedown",handleClickOutside);
     }
   })
 
 
   const handleSearch = (e)=>{
     const searchValue = e.target.value.toLowerCase();
- 
-    
+
     if (searchValue === '') {
       setFilterResult(null); 
       return;
@@ -67,18 +72,18 @@ const Header = () => {
     || recipe.category.toLowerCase().includes(searchValue)
     ||recipe.description.toLowerCase().includes(searchValue)
     ||recipe.ingredients.some(ingredient => ingredient.toLowerCase().includes(searchValue))
-    )
-
-    
+    )  
     setFilterResult(filteredData);
 
   }
+
+  
   return (
-    <header className='relative w-full grid grid-cols-[10%_1fr_16%] gap-6 padding text-textColor font-bold  max-container'>
+    <header className='relative w-full flex justify-between lg:grid grid-cols-[10%_1fr_16%] gap-6 padding text-textColor font-bold  max-container'>
             <div className='flex items-center'>
                 Foodie
             </div>
-            <div className='navigation  hidden md:flex items-center justify-evenly'>
+            <div className='navigation  hidden lg:flex items-center justify-evenly'>
                 <nav><Link to="/">Home <RiArrowDropDownLine className='text-customRed text-2xl'/></Link></nav>
                 <nav><Link>Category <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
                 <nav><Link to="/recipes">Recipies <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
@@ -98,8 +103,23 @@ const Header = () => {
                 }
                   
                 </button>
-                <button className='text-base flex items-center gap-2 round-buttons py-2 px-4'><IoLogInOutline />Login</button>
+                <button className='text-base hidden lg:flex items-center gap-2 round-buttons py-2 px-4'><IoLogInOutline />Login</button>
+                <button onClick={()=>sethambugerMenu(!hamburgerMenu)}  className='lg:hidden text-3xl'>
+                  <GiHamburgerMenu />
+                  
+                </button>
             </div>
+            { hamburgerMenu &&
+              <div className='absolute right-0 mr-[5rem] mt-[4.2rem] rounded-2xl w-auto p-4 bg-white shadow-slate-500 shadow-md  z-50'>
+                  <div className='navigation flex flex-col gap-4 items-center justify-center'>
+                    <button className='text-base items-center gap-2 round-buttons py-2 px-4'>Login</button>
+                    <nav><Link to="/">Home <RiArrowDropDownLine className='text-customRed text-2xl'/></Link></nav>
+                    <nav><Link>Category <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
+                    <nav><Link to="/recipes">Recipies <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
+                    <nav><Link>Contact< RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
+                  </div>
+              </div>
+            }
 {
   searchVisibility &&
 
