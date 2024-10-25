@@ -21,13 +21,15 @@ const Header = () => {
   const [filterResult , setFilterResult] = useState(null);
   const searchRef = useRef(null);
   const favouriteRef = useRef(null);
+  const hamburgerRef = useRef(null);
   const [searchVisibility , setSearchVisibility] = useState(false);
   const [favVisibility , setFavisibility] = useState(false);
   const [hamburgerMenu , sethambugerMenu] = useState(false)
 
   const handleClickOutside = (event) => {
     if ((searchRef.current && !searchRef.current.contains(event.target))
-    ||favouriteRef.current && !favouriteRef.current.contains(event.target)
+    ||(favouriteRef.current && !favouriteRef.current.contains(event.target))
+    ||(hamburgerRef.current && !hamburgerRef.current.contains(event.target))
     ) {
       setSearchVisibility(false);
       setFilterResult(null);
@@ -110,7 +112,7 @@ const Header = () => {
                 </button>
             </div>
             { hamburgerMenu &&
-              <div className='absolute right-0 mr-[5rem] mt-[4.2rem] rounded-2xl w-auto p-4 bg-white shadow-slate-500 shadow-md  z-50'>
+              <div ref={hamburgerRef} className='absolute right-0 mr-[5rem] mt-[4.2rem] rounded-2xl w-auto p-4 bg-white shadow-slate-500 shadow-md  z-50'>
                   <div className='navigation flex flex-col gap-4 items-center justify-center'>
                     <button className='text-base items-center gap-2 round-buttons py-2 px-4'>Login</button>
                     <nav><Link to="/">Home <RiArrowDropDownLine className='text-customRed text-2xl'/></Link></nav>

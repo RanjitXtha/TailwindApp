@@ -67,7 +67,7 @@ const Recipes = () => {
       <Header />
 
      
-    <section className='padding text-textColor'>
+    <section className='padding text-textColor max-container'>
       <h1 className='titles mb-2'>Recipes</h1>
 
       <section className='flex justify-evenly flex-wrap mb-14 font-bold'>

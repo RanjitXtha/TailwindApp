@@ -23,7 +23,7 @@ const Recipe = () => {
         { currentRecipe &&
 
         <div>
-        <section className='padding grid grid-cols-[1fr_1.3fr] gap-8 text-textColor'>
+        <section className='padding grid grid-cols-[1fr_1.3fr] gap-8 text-textColor max-container'>
         
         <div className='w-full'>
             <h1 className='recipe-smalltitle'>{currentRecipe.category}</h1>

@@ -10,7 +10,7 @@ const Services = () => {
               </div>
 
 
-              <div className='flex w-full justify-center py-4'>
+              <div className='flex w-full px-2 justify-center py-4'>
               <div className='flex flex-col lg:flex-row gap-5 text-textColor bg-white p-6 pr-0 rounded-3xl' >
                 <div className='flex lg:block items-center gap-4 border-b-2 lg:border-b-0 lg:border-r-2 pr-6 border-customYellow text-center'>
                   <p className='text-4xl lg:text-5xl font-extrabold mb-3'>100</p>
