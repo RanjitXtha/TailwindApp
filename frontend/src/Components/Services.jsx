@@ -3,7 +3,7 @@ import Burger from '../assets/burger.png'
 
 const Services = () => {
   return (
-    <div className='padding my-32 max-container  '>
+    <div className='padding my-32 max-container overflow-x-clip  '>
         <section className=' w-full flex flex-col service-md:flex-row  items-center service-md:h-72 rounded-3xl bg-customYellow'>
               <div className='w-[30rem] h-full relative'>
                 <img src={Burger} className='service-md:absolute service-md:scale-[1.6] service-md:scale-x-[1.9] top-0 left-0 ' />

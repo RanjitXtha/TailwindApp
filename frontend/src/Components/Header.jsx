@@ -125,7 +125,7 @@ const Header = () => {
 {
   searchVisibility &&
 
-            <div ref={searchRef} className='absolute right-0 mr-[5rem] mt-[4.2rem] rounded-2xl w-[25rem] bg-white shadow-slate-500 shadow-md p-2 z-50'>
+            <div ref={searchRef} className='absolute mx-[2rem] sm:mx-[3rem] md:mx-[5rem] mt-[4.2rem] rounded-2xl sm:w-[25rem] left-0 sm:left-auto right-0 bg-white shadow-slate-500 shadow-md p-2 z-50'>
               <input type="text" placeholder="Search" className="p-1 w-full bg-transparent focus:outline-none" onChange={handleSearch} />
               <div className='max-h-[22rem] overflow-y-scroll hide-scrollbar'>
                 {
@@ -152,7 +152,7 @@ const Header = () => {
             }
 {
   favVisibility &&
-  <div ref={favouriteRef} className=' absolute right-0 mr-[5rem] mt-[4.2rem] rounded-2xl w-[25rem] bg-white shadow-slate-500 shadow-md p-2 z-50'>
+  <div ref={favouriteRef} className=' absolute mx-[2rem] sm:mx-[3rem] md:mx-[5rem] mt-[4.2rem] rounded-2xl sm:w-[25rem] left-0 sm:left-auto right-0 bg-white shadow-slate-500 shadow-md p-2 z-50'>
     {
     
       (favourites.length !== 0)? favourites.map((recipe)=>(

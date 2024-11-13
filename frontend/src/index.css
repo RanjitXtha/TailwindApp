@@ -10,7 +10,7 @@
   }
 
   .padding{
-    @apply px-[3rem] py-4 sm:px-[5rem] sm:py-4
+    @apply px-[2rem] sm:px-[3rem] py-4 md:px-[5rem] sm:py-4
   }
 
   .round-buttons{
