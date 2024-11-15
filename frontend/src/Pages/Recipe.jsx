@@ -23,7 +23,7 @@ const Recipe = () => {
         { currentRecipe &&
 
         <div>
-        <section className='padding grid grid-cols-[1fr_1.3fr] gap-8 text-textColor max-container'>
+        <section className='padding flex flex-col lg:grid grid-cols-[1fr_1.3fr] gap-8 text-textColor max-container'>
         
         <div className='w-full'>
             <h1 className='recipe-smalltitle'>{currentRecipe.category}</h1>
@@ -43,28 +43,29 @@ const Recipe = () => {
 
         </div>
 
-        <div className='w-full h-[32.8rem] bg-slate-600'>
-
+        <div className='w-full h-auto lg:h-[32.8rem]'>
+            <img src={currentRecipe.image} alt={currentRecipe.title} />
         </div>
 
         </section>
-        <section className='flex gap-10 mt-5 padding text-textColor'>
+        <section className='gap-10 mt-5 padding text-textColor'>
               
-                <div className='bg-customRed px-7 py-6 shadow-md shadow-slate-400 rounded-3xl min-w-[17rem]'>
-                <h1 className='titles text-white'>Ingredients</h1>
-
+                <div className='px-7 py-6 shadow-md shadow-slate-400 rounded-3xl'>
+                <h1 className='titles'>Ingredients</h1>
+              <div className='flex gap-5 flex-wrap'>
                   {currentRecipe.ingredients.map((ingredient)=>(
-                    <div className='bg-white text-textColor rounded-2xl py-2 px-5 mb-3 font-bold '>
+                    <div className='bg-customRed text-white rounded-2xl py-2 px-5 font-bold '>
                     {ingredient}
                   </div>
                     ))}
+                </div>
                   
                 </div>
   
-                <div className='bg-customRed w-full px-7 py-6 shadow-md shadow-slate-400 rounded-3xl font-bold'>
-                  <h1 className='titles text-white'>Instruction</h1>
+                <div className='w-full my-[3rem] px-7 py-6 shadow-md shadow-slate-400 rounded-3xl font-bold'>
+                  <h1 className='titles '>Instruction</h1>
                         {currentRecipe.instructions.map((instruction)=>(
-                        <div className='bg-white rounded-xl text-textColor py-2 px-5 mb-3'>
+                        <div className='rounded-xl text-textColor py-2 px-5 mb-3'>
                         {instruction}
                         </div>
                         ))}

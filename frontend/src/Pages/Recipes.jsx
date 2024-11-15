@@ -107,7 +107,7 @@ const Recipes = () => {
                   <div className='max-w-[16rem] h-[16rem]'>
                     <img src={recipe.image} alt={recipe.title} />
                   </div>
-                  <p className='mt-3 mb-3 font-bold text-xl '>{recipe.title} </p>
+                  <p className='mt-3 mb-3 font-bold text-xl w-full truncate text-ellipsis '>{recipe.title} </p>
                   <p className='text-lightColor group-hover:text-white'>{recipe.category}</p>
                 </div>
               </Link>
