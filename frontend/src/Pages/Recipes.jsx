@@ -70,7 +70,7 @@ const Recipes = () => {
     <section className='padding text-textColor max-container'>
       <h1 className='titles mb-2'>Recipes</h1>
 
-      <section className='flex justify-evenly flex-wrap mb-14 font-bold'>
+      <section className='flex justify-evenly flex-wrap my-10 font-bold'>
         { 
           categories.map(category=>(
             <button key={category.title} onClick={()=>setCategory(category.title)} className={`${active===category.title?'bg-customRed text-white':'bg-customWhite'}
@@ -83,11 +83,11 @@ const Recipes = () => {
         
       </section>
 
-      <div className='flex flex-wrap justify-evenly'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 custom-md:grid-cols-3 gap-x-3 gap-y-6 justify-items-center'>
            {
               filteredRecipes && filteredRecipes.map((recipe)=>(
               <Link to={`/recipe/${recipe.id}`}>
-                <div className='relative mb-[5rem] group w-[20rem] rounded-3xl shadow-lg shadow-slate-400 grid justify-center p-5 hover:hover-cards'>
+                <div className='relative mb-[5rem] group max-w-[20rem] rounded-3xl shadow-lg shadow-slate-400 grid justify-center p-5 hover:hover-cards'>
                 <button onClick={(e)=>{
                   e.preventDefault();
                   e.stopPropagation();
@@ -104,7 +104,7 @@ const Recipes = () => {
             }
 
                 </button> 
-                  <div className='w-[16rem] h-[16rem]'>
+                  <div className='max-w-[16rem] h-[16rem]'>
                     <img src={recipe.image} alt={recipe.title} />
                   </div>
                   <p className='mt-3 mb-3 font-bold text-xl '>{recipe.title} </p>

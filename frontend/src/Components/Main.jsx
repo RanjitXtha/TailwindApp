@@ -10,7 +10,7 @@ import rename from '../assets/rename.png'
 
 const Main = () => {
   return (
-    <section className='flex flex-col hero-md:flex-row gap-16 hero-md:h-[calc(100vh-5rem)] padding text-textColor mb-20 max-container '>
+    <section className='flex flex-col hero-md:flex-row gap-16 padding text-textColor mb-20 max-container '>
             <div className='flex flex-col w-full hero-md:w-[50%] h-full gap-10 justify-start hero-md:justify-evenly'>
                 <div className='flex text-3xl gap-3'>
                     <nav><FaFacebook /></nav>
