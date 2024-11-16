@@ -19,6 +19,7 @@ import { FavouriteContext } from '../context/favourite';
 import { useContext } from 'react';
 
 import { useLocation } from 'react-router-dom';
+import Footer from '../Components/Footer'
 
 const Recipes = () => {
 
@@ -115,7 +116,7 @@ const Recipes = () => {
           }
       </div>
     </section>
-
+    <Footer />
     </div>
   )
 }

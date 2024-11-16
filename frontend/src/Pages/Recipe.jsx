@@ -5,6 +5,7 @@ import Header from '../Components/Header'
 import { FaHeart } from "react-icons/fa";
 import { FcClock } from "react-icons/fc";
 import { GiCookingPot } from "react-icons/gi";
+import Footer from '../Components/Footer'
 
 const Recipe = () => {
     const [currentRecipe , setRecipe] = useState(null)
@@ -23,7 +24,7 @@ const Recipe = () => {
         { currentRecipe &&
 
         <div>
-        <section className='padding flex flex-col lg:grid grid-cols-[1fr_1.3fr] gap-8 text-textColor max-container'>
+        <section className='padding flex  flex-col lg:grid grid-cols-[1fr_1.3fr] gap-8 text-textColor max-container'>
         
         <div className='w-full'>
             <h1 className='recipe-smalltitle'>{currentRecipe.category}</h1>
@@ -43,12 +44,12 @@ const Recipe = () => {
 
         </div>
 
-        <div className='w-full h-auto lg:h-[32.8rem]'>
-            <img src={currentRecipe.image} alt={currentRecipe.title} />
+        <div className='w-full h-auto grid justify-center items-center '>
+          <img className='max-w-[26rem]' src={currentRecipe.image} alt={currentRecipe.title} />
         </div>
 
         </section>
-        <section className='gap-10 mt-5 padding text-textColor'>
+        <section className='gap-10 mt-8 padding text-textColor'>
               
                 <div className='px-7 py-6 shadow-md shadow-slate-400 rounded-3xl'>
                 <h1 className='titles'>Ingredients</h1>
@@ -74,6 +75,8 @@ const Recipe = () => {
         </div>
 
         }
+      
+      <Footer />
               
     </div>
   )

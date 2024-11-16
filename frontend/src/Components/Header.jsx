@@ -12,6 +12,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 import { Link } from 'react-router-dom';
 import { recipes } from '../data';
+import { categories } from '../data';
 
 import { FavouriteContext } from '../context/favourite';
 
@@ -87,7 +88,16 @@ const Header = () => {
             </div>
             <div className='navigation  hidden lg:flex items-center justify-evenly'>
                 <nav><Link to="/">Home <RiArrowDropDownLine className='text-customRed text-2xl'/></Link></nav>
-                <nav><Link>Category <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
+                <nav className='relative group h-full flex items-center'><Link>Category <RiArrowDropDownLine className='text-customRed text-2xl' /></Link>
+                  <div className='absolute  hidden group-hover:flex bg-white shadow-slate-500 shadow-md flex-col gap-2 p-3 z-[100] min-w-[10rem] top-[2.5rem] rounded-lg'>
+                    
+                    {
+                      categories.map((category)=>(
+                        <Link to={`/recipes?category=${category.title}`}>{category.title}</Link>
+                        ))
+                    }
+                  </div>
+                </nav>
                 <nav><Link to="/recipes">Recipies <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
                 <nav><Link>Contact< RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
             </div>
