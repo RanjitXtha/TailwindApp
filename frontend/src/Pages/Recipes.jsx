@@ -64,11 +64,11 @@ const Recipes = () => {
     
   }
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className=''>
       <Header />
 
      
-    <section className='padding text-textColor max-container flex-1'>
+    <section className='padding flex flex-col min-h-screen text-textColor max-container flex-1 flex-shrink-0'>
       <h1 className='titles mb-2'>Recipes</h1>
 
       <section className='flex justify-evenly flex-wrap my-10 font-bold'>
@@ -84,11 +84,11 @@ const Recipes = () => {
         
       </section>
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 custom-md:grid-cols-3 gap-x-3 gap-y-6 justify-items-center'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-6 justify-items-center'>
            {
               filteredRecipes && filteredRecipes.map((recipe)=>(
               <Link to={`/recipe/${recipe.id}`} className='w-full flex justify-center'>
-                <div className='relative mb-[5rem] group max-w-[20rem] rounded-3xl shadow-lg shadow-slate-400 grid justify-center p-5 hover:hover-cards'>
+                <div className='relative mb-[5rem] group w-full  max-w-[20rem] rounded-3xl shadow-lg shadow-slate-400 grid justify-center p-5 hover:hover-cards'>
                 <button onClick={(e)=>{
                   e.preventDefault();
                   e.stopPropagation();

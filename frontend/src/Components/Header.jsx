@@ -77,13 +77,13 @@ const Header = () => {
   
   return (
     <header className='relative w-full flex justify-between lg:grid grid-cols-[10%_1fr_16%] gap-6 padding text-textColor font-bold  max-container'>
-            <div className='flex items-center'>
+            <div className='flex items-center text-2xl font-extrabold'>
                 Foodie
             </div>
             <div className='navigation  hidden lg:flex items-center justify-evenly'>
                 <nav><Link to="/">Home <RiArrowDropDownLine className='text-customRed text-2xl'/></Link></nav>
                 <nav className='relative group h-full flex items-center'><Link>Category <RiArrowDropDownLine className='text-customRed text-2xl' /></Link>
-                  <div className='absolute  hidden group-hover:flex bg-white shadow-slate-500 shadow-md flex-col gap-2 p-3 z-[100] min-w-[10rem] top-[2.5rem] rounded-lg'>
+                  <div className='absolute  hidden group-hover:flex bg-white shadow-slate-500 shadow-md flex-col gap-2 py-3 px-4 z-[100] min-w-[10rem] top-[2.5rem] rounded-lg'>
                     
                     {
                       categories.map((category)=>(
@@ -92,7 +92,7 @@ const Header = () => {
                     }
                   </div>
                 </nav>
-                <nav><Link to="/recipes">Recipies <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
+                <nav><Link to="/recipes">Recipes <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
                 <nav><Link>Contact< RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
             </div>
                     
@@ -121,7 +121,7 @@ const Header = () => {
                     <button className='text-base items-center gap-2 round-buttons py-2 px-4'>Login</button>
                     <nav><Link to="/">Home <RiArrowDropDownLine className='text-customRed text-2xl'/></Link></nav>
                     <nav><Link>Category <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
-                    <nav><Link to="/recipes">Recipies <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
+                    <nav><Link to="/recipes">Recipes <RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
                     <nav><Link>Contact< RiArrowDropDownLine className='text-customRed text-2xl' /></Link></nav>
                   </div>
               </div>
