@@ -39,12 +39,6 @@ const Header = () => {
     }
   };
 
-  const handleClickFav = (e)=>{
-    if(favouriteRef.current && !favouriteRef.current.contains(e.target)){
-      setFavisibility(false);
-    }
-
-  }
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
@@ -93,7 +87,7 @@ const Header = () => {
                     
                     {
                       categories.map((category)=>(
-                        <Link to={`/recipes?category=${category.title}`}>{category.title}</Link>
+                        <Link className='hover:text-customRed' to={`/recipes?category=${category.title}`}>{category.title}</Link>
                         ))
                     }
                   </div>
@@ -190,7 +184,7 @@ const Header = () => {
           </div> 
         </div>
         </Link>
-      )):<p className='text-lightColor text-sm'>No recipe has been added to your favourites</p>
+      )):<p className='text-lightColor text-sm px-2 py-3'>No recipe has been added to your favourites</p>
     }
   </div>
 }
