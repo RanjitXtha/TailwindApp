@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/TailwindApp/static/css/main.c41d8f7a.css",
+    "main.css": "/TailwindApp/static/css/main.f7dc228f.css",
     "main.js": "/TailwindApp/static/js/main.e59be4e2.js",
     "static/js/453.8ab44547.chunk.js": "/TailwindApp/static/js/453.8ab44547.chunk.js",
     "static/media/hero.png": "/TailwindApp/static/media/hero.e2656257e1a3c1ad68e9.png",
@@ -25,12 +25,12 @@
     "static/media/popularr.png": "/TailwindApp/static/media/popularr.ed926e6af1fcb9a7e88d.png",
     "static/media/local.png": "/TailwindApp/static/media/local.b5f84bd0aa01b9e50196.png",
     "index.html": "/TailwindApp/index.html",
-    "main.c41d8f7a.css.map": "/TailwindApp/static/css/main.c41d8f7a.css.map",
+    "main.f7dc228f.css.map": "/TailwindApp/static/css/main.f7dc228f.css.map",
     "main.e59be4e2.js.map": "/TailwindApp/static/js/main.e59be4e2.js.map",
     "453.8ab44547.chunk.js.map": "/TailwindApp/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c41d8f7a.css",
+    "static/css/main.f7dc228f.css",
     "static/js/main.e59be4e2.js"
   ]
 }
