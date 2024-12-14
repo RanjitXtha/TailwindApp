@@ -9,6 +9,7 @@ function App() {
     <div>
       <Router>
         <Routes>
+        <Route path="/TailwindApp" element={<Home />} />
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/recipes" element={<Recipes />} />
