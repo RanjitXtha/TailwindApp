@@ -22,11 +22,11 @@
   }
 
   .category-cards{ /*10 rem for padding , 1.25 for each gap. query uses the point or greater. md means effect applies for 768 or higher*/
-    @apply  h-[19rem]  2xl:min-w-[calc((100%-11.5rem-5rem)/5)]
-    xl:min-w-[calc((100%-11.5rem-3.75rem)/4)]
-    md:min-w-[calc((100%-11.5rem-2.5rem)/3)]
-    sm:min-w-[calc((100%-11.5rem-1.25rem)/2)]
-    min-w-[calc(100%-11.5rem)]
+    @apply  h-[19rem]  2xl:min-w-[calc((100%-1.5rem-5rem)/5)]
+    lg:min-w-[calc((100%-1.5rem-3.75rem)/4)]
+    md:min-w-[calc((100%-1.5rem-2.5rem)/3)]
+    sm:min-w-[calc((100%-1.5rem-1.25rem)/2)]
+    min-w-[calc(100%-1.5rem)]
      text-center p-2 bg-white rounded-3xl flex flex-col items-center justify-evenly flex-shrink-0 shadow-lg shadow-slate-400
   
   }
