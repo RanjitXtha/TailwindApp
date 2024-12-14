@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/TailwindApp/static/css/main.c41d8f7a.css",
+    "main.js": "/TailwindApp/static/js/main.e59be4e2.js",
+    "static/js/453.8ab44547.chunk.js": "/TailwindApp/static/js/453.8ab44547.chunk.js",
+    "static/media/hero.png": "/TailwindApp/static/media/hero.e2656257e1a3c1ad68e9.png",
+    "static/media/dalbhat.png": "/TailwindApp/static/media/dalbhat.f117c811cb2df36d2640.png",
+    "static/media/paneerbuttermasala.png": "/TailwindApp/static/media/paneerbuttermasala.e22a9696b911a8ba2034.png",
+    "static/media/chickentikkamasala.png": "/TailwindApp/static/media/chickentikkamasala.914bf90a62d29ece44ab.png",
+    "static/media/margaritapizza.png": "/TailwindApp/static/media/margaritapizza.3a647cc3cedb885f657c.png",
+    "static/media/spagetticarbonara.png": "/TailwindApp/static/media/spagetticarbonara.abfc8ed4e34952e72968.png",
+    "static/media/caesarsalad.png": "/TailwindApp/static/media/caesarsalad.04a1d921d39d2c107153.png",
+    "static/media/samosa.png": "/TailwindApp/static/media/samosa.14aa9e01352015550ad3.png",
+    "static/media/burger.png": "/TailwindApp/static/media/burger.8f55275121a054137973.png",
+    "static/media/momo.png": "/TailwindApp/static/media/momo.5c200416ba4467b94039.png",
+    "static/media/rename.png": "/TailwindApp/static/media/rename.1bde036b4b99064b45ff.png",
+    "static/media/cake.png": "/TailwindApp/static/media/cake.b646396a4027654c0fbf.png",
+    "static/media/masalachai.png": "/TailwindApp/static/media/masalachai.f6fd21d3c03555c0c793.png",
+    "static/media/margarita.png": "/TailwindApp/static/media/margarita.846f1fb9d2e06d6aec07.png",
+    "static/media/western.png": "/TailwindApp/static/media/western.7905743310066b7ca559.png",
+    "static/media/yomari.png": "/TailwindApp/static/media/yomari.edd9767a2fb69c293d47.png",
+    "static/media/drink.png": "/TailwindApp/static/media/drink.8fdd05c21efff9a30d02.png",
+    "static/media/dessert.png": "/TailwindApp/static/media/dessert.a2f28bbcd451723dad9a.png",
+    "static/media/vegeterian.png": "/TailwindApp/static/media/vegeterian.04bd2c7485386e951b4d.png",
+    "static/media/popularr.png": "/TailwindApp/static/media/popularr.ed926e6af1fcb9a7e88d.png",
+    "static/media/local.png": "/TailwindApp/static/media/local.b5f84bd0aa01b9e50196.png",
+    "index.html": "/TailwindApp/index.html",
+    "main.c41d8f7a.css.map": "/TailwindApp/static/css/main.c41d8f7a.css.map",
+    "main.e59be4e2.js.map": "/TailwindApp/static/js/main.e59be4e2.js.map",
+    "453.8ab44547.chunk.js.map": "/TailwindApp/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c41d8f7a.css",
+    "static/js/main.e59be4e2.js"
+  ]
+}
