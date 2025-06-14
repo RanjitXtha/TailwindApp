@@ -134,7 +134,7 @@ const Header = () => {
               <div className='max-h-[22rem] overflow-y-scroll hide-scrollbar'>
                 {
                   filterResult? filterResult.map((recipe)=>(
-                    <Link to={`/recipe/${recipe.id}`}>
+                    <Link index={recipe.id} to={`/recipe/${recipe.id}`}>
                     <div className='flex gap-4 mb-2'>
                       <div className='w-16 h-16'>
                         <img src={recipe.image} alt={recipe.title} />

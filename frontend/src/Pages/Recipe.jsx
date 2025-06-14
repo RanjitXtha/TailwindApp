@@ -15,7 +15,7 @@ const Recipe = () => {
     useEffect(()=>{
         const result = recipes.find(recipe => recipe.id===recipeId)
         setRecipe(result);
-    },[])
+    },[id])
     
   return (
     <div>
